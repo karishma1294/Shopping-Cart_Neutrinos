@@ -1,27 +1,20 @@
-# ShoppingCart
+# ShoppingCart<br>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+Perform the below mentioned steps to run the basic shopping cart application in sequential order.<br>
 
-## Development server
+  #Backend:<br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+    Database :<br>
+    Start the db to accept the connection from server<br>
+     -> Run mongo server on default port to accept the connection.<br>
 
-## Code scaffolding
+    To run server:<br>
+      1-> In terminal, navigate to Shopping-cart folder.<br>
+      2-> Start the server by executing "node server.js"<br>
+      3-> Success message will be displayed when server started successfully.<br>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  #Frontend:<br>
+    -> Navigate to shopping-cart folder and run 'ng-server'. Navigate to `http://localhost:4200/`.The app will automatically reload if you change any of the source files.
 
-## Build
+Note: Please run "npm install" in terminal to install all the dependencies used in the project.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
