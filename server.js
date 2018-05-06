@@ -13,13 +13,16 @@ const express = require('express'),
 
 mongoose.Promise = global.Promise;
 mongoose.connect(config.DB).then(
-    () => {console.log('Database is connected')
+    () => {
+      console.log('Database is connected');
+      //Removing data from Product before performing any operation
       Product.remove({},(err,products)=>{
         if(err){
           return console.log("Not able to remove data");
         }
       });
-      Cart.remove({},(err,carts)=>{
+       //Removing data from Cart before performing any operation
+       Cart.remove({},(err,carts)=>{
         if(err){
           return console.log("Not able to remove data");
         }

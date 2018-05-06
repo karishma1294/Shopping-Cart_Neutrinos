@@ -3,12 +3,12 @@
 var express = require('express');
 var productRoutes = express.Router();
 
-// Require Item model in our routes module
+// Require Product and Cart model in our routes module
 var Product = require('../models/product').Product;
 var Cart = require('../models/product').Cart;
 var count=0;
-//function to count the items in cart
 
+//function to count the items in cart
 function cartItemCount(){
     Cart.count({},(err,countItems)=>{
         count=countItems;
@@ -31,6 +31,7 @@ productRoutes.route('/').get(function (req, res) {
   });
 });
 
+//Defined post route for adding item in Cart
 productRoutes.post('/add/:id',function (req, res) {
 
     var cart = new Cart(req.body);
@@ -59,6 +60,7 @@ productRoutes.post('/add/:id',function (req, res) {
 });
 });
 
+//Defined delete routes to remove item from Cart 
 productRoutes.delete('/update/:id',function (req, res) {
 
   Cart.remove({"productId" : req.params.id},(err,cart)=>{
@@ -86,6 +88,11 @@ productRoutes.delete('/update/:id',function (req, res) {
 });
 });
 
-//  Defined update route
+
+// Defined routes for invalid url
+productRoutes.route('**').get(function (req, res) {
+  res.send('Invalid Url accessed');
+
+});
 
 module.exports = productRoutes;

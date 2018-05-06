@@ -8,6 +8,7 @@ export class ProductListService {
 
   constructor(private http: HttpClient) {}
 
+//Service to call get request to fetch items
 
   getProductList() {
     const uri = 'http://localhost:4000/products';
@@ -18,6 +19,8 @@ export class ProductListService {
               return res;
             });
   }
+
+//Service to call post request to add items in carts
 
   addProduct(product) {
     const uri = 'http://localhost:4000/products/add' + "/"+ product._id;
@@ -32,8 +35,10 @@ export class ProductListService {
       .post(uri, obj).map(res=>{
         return res;
       })
-
   }
+
+  //Service to call delete request to remove items in carts
+
 
   deleteProduct(product) {
     const uri = 'http://localhost:4000/products/update'+"/" + product._id;

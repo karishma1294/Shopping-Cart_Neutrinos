@@ -6,7 +6,7 @@ import {ProductListService } from './product-list.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styles: ['./app.component.css'],
 
 })
 export class AppComponent implements OnInit {
@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
 products:any=[];
 count: number;
 
-ngOnInit() {
+ ngOnInit() {
    this.getProducts();
 
   }
